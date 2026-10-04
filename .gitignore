@@ -1,0 +1,17 @@
+# Large binary dumps and cache files
+*.rpmc
+*.bin
+*.rpyc
+*.rpyb
+
+# Log & trace output
+log.txt
+trace.txt
+
+# Save states and caches
+data/saves/
+data/cache/
+cache/
+scratch/
+.idea/
+.vscode/
