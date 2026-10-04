@@ -120,9 +120,9 @@ screen crypto_dashboard():
                         text "💼 Portfolio Asset Allocation" size 20 color "#FFFFFF" bold True
                         null height 10
                         text "USDT Cash: $[usdt_balance:,.2f]" size 18 color "#00FFCC"
-                        text "BTC Value: $[btc_holdings * btc_price:,.2f]" size 18 color "#FFD700"
-                        text "ETH Value: $[eth_holdings * eth_price:,.2f]" size 18 color "#7C4DFF"
-                        text "BIC Value: $[bic_holdings * bic_price:,.2f]" size 18 color "#00E5FF"
+                        text "BTC Value: $[btc_val:,.2f]" size 18 color "#FFD700"
+                        text "ETH Value: $[eth_val:,.2f]" size 18 color "#7C4DFF"
+                        text "BIC Value: $[bic_val:,.2f]" size 18 color "#00E5FF"
                         null height 10
                         text "Total Net Worth: $[total_net_worth:,.2f] USD" size 20 color "#FFFFFF" bold True
                 

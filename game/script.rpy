@@ -37,9 +37,18 @@ init python:
     fear_greed_index = 78
     fear_greed_label = "Extreme Greed"
 
+    btc_val = 0.25 * 95000.0
+    eth_val = 3.0 * 3500.0
+    bic_val = 100.0 * 639.0
+    total_net_worth = usdt_balance + btc_val + eth_val + bic_val
+    total_pnl = 0.0
+
     def calculate_metrics():
-        global total_net_worth, total_pnl
-        net = usdt_balance + (btc_holdings * btc_price) + (eth_holdings * eth_price) + (bic_holdings * bic_price)
+        global total_net_worth, total_pnl, btc_val, eth_val, bic_val
+        btc_val = btc_holdings * btc_price
+        eth_val = eth_holdings * eth_price
+        bic_val = bic_holdings * bic_price
+        net = usdt_balance + btc_val + eth_val + bic_val
         total_net_worth = net
         total_pnl = net - (initial_capital + (0.25 * 95000.0) + (3.0 * 3500.0) + (100.0 * 639.0))
 

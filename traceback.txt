@@ -1,52 +1,88 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 15, in script
-    "Welcome to BiCrypto 639 - Crypto Trading Simulator."
-  File "renpy/common/00action_menu.rpy", line 228, in __call__
-    layout.yesno_screen(layout.QUIT, Quit(False))
-  File "renpy/common/00layout.rpy", line 526, in yesno_screen
-    elif renpy.invoke_in_new_context(layout.invoke_yesno_prompt, None, message):
-  File "renpy/common/00layout.rpy", line 471, in invoke_yesno_prompt
-    rv = layout.yesno_prompt(*args)
-AttributeError: 'Layout' object has no attribute 'yesno_prompt'
+  File "game/script.rpy", line 137, in script
+    call screen crypto_dashboard
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/screens.rpy", line 18, in execute
+    screen crypto_dashboard():
+  File "game/screens.rpy", line 18, in execute
+    screen crypto_dashboard():
+  File "game/screens.rpy", line 22, in execute
+    frame:
+  File "game/screens.rpy", line 28, in execute
+    vbox:
+  File "game/screens.rpy", line 110, in execute
+    hbox:
+  File "game/screens.rpy", line 114, in execute
+    frame:
+NameError: Name 'btc_holdings * btc_price' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 15, in script
-    "Welcome to BiCrypto 639 - Crypto Trading Simulator."
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\ast.py", line 930, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\exports.py", line 1474, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\character.py", line 1352, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\character.py", line 1003, in do_display
-    display_say(who,
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\character.py", line 693, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "game/script.rpy", line 137, in script
+    call screen crypto_dashboard
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\exports.py", line 3347, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 3582, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 4392, in interact_core
-    self.quit_event()
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 3195, in quit_event
-    renpy.display.behavior.run(renpy.config.quit_action)
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\behavior.py", line 379, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_menu.rpy", line 228, in __call__
-    layout.yesno_screen(layout.QUIT, Quit(False))
-  File "renpy/common/00layout.rpy", line 526, in yesno_screen
-    elif renpy.invoke_in_new_context(layout.invoke_yesno_prompt, None, message):
-  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\game.py", line 287, in invoke_in_new_context
-    return callable(*args, **kwargs)
-  File "renpy/common/00layout.rpy", line 471, in invoke_yesno_prompt
-    rv = layout.yesno_prompt(*args)
-AttributeError: 'Layout' object has no attribute 'yesno_prompt'
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 4055, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\core.py", line 4055, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 18, in execute
+    screen crypto_dashboard():
+  File "game/screens.rpy", line 18, in execute
+    screen crypto_dashboard():
+  File "game/screens.rpy", line 22, in execute
+    frame:
+  File "game/screens.rpy", line 28, in execute
+    vbox:
+  File "game/screens.rpy", line 110, in execute
+    hbox:
+  File "game/screens.rpy", line 114, in execute
+    frame:
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\text\text.py", line 1727, in _scope
+    return self.set_text(self.text_parameter, scope, self.substitute, update)
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\text\text.py", line 1763, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
+  File "/home/tom/ab/renpy-build-fix/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
+  File "C:\Users\dp231\Downloads\bicrypto-639.rar_-_Mirrored.to_-_Mirrorc_Archive_x64_8418\renpy\substitutions.py", line 236, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'btc_holdings * btc_price' is not defined.
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.1.3.23091805
-BiCrypto 639 1.0.0
-Sun Oct  4 18:46:08 2026
+BiCrypto 639 - Crypto Trading Simulator 2.0.0
+Sun Oct  4 19:06:50 2026
